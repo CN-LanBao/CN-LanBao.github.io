@@ -8,10 +8,6 @@ tags:
 - os
 ---
 
-# 读取 subprocess.Popen 执行命令的输出
-> 操作系统：Ubuntu 18.04  
-> Python 3.6+
-
 
 以 `ping www.baidu.com -c3` 为例，通过 `iter()` 创建一个迭代对象，实时读取执行时的标准输出
 
