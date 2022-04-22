@@ -9,7 +9,7 @@ tags:
 ---
 
 
-执行 subprocess.Popen 时，需要持续读取其输出（subprocess.run 的读取方法不做赘述）
+执行 subprocess.Popen 时，需要持续读取其输出（subprocess.run 的读取方法不做赘述）  
 以 `ping www.baidu.com -c3` 为例，通过 `iter()` 创建一个迭代对象，实时读取执行时的标准输出
 
 ```
