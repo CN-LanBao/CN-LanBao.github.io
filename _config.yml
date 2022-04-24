@@ -46,7 +46,9 @@ highlight:
 
 #### Markdown Processors
 ## 'redcarpet' is unsupported on GitHub Pages now.
-markdown: kramdown
+markdown: github
+# kramdown:
+#     input: GFM
 kramdown:
     input: GFM
 
