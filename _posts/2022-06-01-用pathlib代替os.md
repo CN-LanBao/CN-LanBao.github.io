@@ -12,7 +12,7 @@ tags:
 在 StackOverflow 上回答文件路径相关的问题时用到了 `os.path`，有人在 comment 里面提到 `pathlib` 更为强大  
 之前只知道 `subprocess` 可以用来代替 `os.system` 等等，于是翻了一下官方文档，先附上链接 [pathlib — Object-oriented filesystem paths](https://docs.python.org/3/library/pathlib.html)  
 本文主要记录平时常用的 `os` 功能用 `pathlib` 替代  
-`os` 和 `pathlib` 的映射表放在了文末，需要的请前往文末查看
+`os` 和 `pathlib` 的映射表放在了文末，需要的请[前往文末查看](#end)
 
 
 # 基础用法
@@ -234,7 +234,7 @@ Path("test/test.file").with_suffix(".file.txt")  # test\test.file.txt
 ```
 
 
-# os 和 pathlib 中的等价映射表
+# os 和 pathlib 中的等价映射表  <span id="end"></span>
 > 并不是所有的函数/方法都是等价的，尽管有一些重叠的用例，但是有不同的语义。包括 `os.path.abspath()` 和 `Path.resolve()`，`os.path.relpath()` 和 `PurePath.relative_to()`  
 
 |os and os.path|pathlib|
