@@ -12,7 +12,8 @@ tags:
 从实习 Java web 后端开发开始就在用 [ECharts](https://echarts.apache.org/zh/index.html) 做数据可视化了，到现在做效能相关工作在开源平台 Grafana 上使用。为同事实现的性能测试数据生成绘制图表也是用了 ECharts，但是过程较为繁琐，需要往已有的 html 模板中写入对应的数据  
 但最近发现有个国人开发的库 [pyecharts](https://github.com/pyecharts/pyecharts) ，将 Python 和 ECharts 相结合，附上 [中文文档](https://pyecharts.org/#/zh-cn/)   
 非深度使用的话，不再需要学习前端知识了  
-举一个生成柱状图的示例
+举一个生成柱状图的示例  
+
 ```
 from pyecharts.charts import Bar
 from pyecharts import options as opts
