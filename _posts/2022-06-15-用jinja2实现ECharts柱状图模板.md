@@ -29,7 +29,7 @@ Demo
 |--main.py  # 测试代码
 ```
 
-`templates/test.html`，`{{ 变量 }}` 的写法
+`templates/test.html`
 ```
 <!DOCTYPE html>
 <html lang="en">
