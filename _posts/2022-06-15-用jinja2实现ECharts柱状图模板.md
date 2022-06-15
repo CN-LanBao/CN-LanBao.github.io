@@ -78,9 +78,9 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 在 templates 目录下创建 macro 文件，`templates/macro`
 ```
 
-{% macsro p(name) -%}
-    <p>{{ name }}</p>
-{%- endmacro %}
+# {% macsro p(name) -%}
+#     <p>{{ name }}</p>
+# {%- endmacro %}
 ```
 
 修改一下 `templates/test.html` 的代码
