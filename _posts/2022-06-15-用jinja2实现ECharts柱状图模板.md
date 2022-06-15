@@ -75,7 +75,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 # 宏
 > 宏类似常规编程语言中的函数。它们用于把常用行为作为可重用的函数，取代手动重复的工作  
 
-在 templates 目录下创建 macro. 文件，`templates/macro.`
+
 ```
 {% macro p(name) -%}
     <p>{{ name }}</p>
