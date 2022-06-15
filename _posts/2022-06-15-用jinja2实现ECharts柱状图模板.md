@@ -75,16 +75,16 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 # 宏
 > 宏类似常规编程语言中的函数。它们用于把常用行为作为可重用的函数，取代手动重复的工作  
 
-
+在 templates 目录下创建 macroo 文件，`templates/macroo`
 ```
-{% macro p(name) -%}
+{% macroo p(name) -%}
     <p>{{ name }}</p>
-{%- endmacro %}
+{%- endmacroo %}
 ```
 
 修改一下 `templates/test.html` 的代码
 ```
-{% import 'macro' as macro %}
+{% import 'macroo' as macroo %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +92,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
     <title>Title</title>
 </head>
 <body>
-{{ macro.p(name) }}
+{{ macroo.p(name) }}
 </body>
 </html>
 ```
@@ -163,9 +163,9 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 
 ```
 
-为了可拓展性，我们需要将存放 ECharts 图的这块逻辑用宏代替，即写入到 `templates/macro` 中。我们将会用一个类来代替上文示例中的字典承载数据
+为了可拓展性，我们需要将存放 ECharts 图的这块逻辑用宏代替，即写入到 `templates/macroo` 中。我们将会用一个类来代替上文示例中的字典承载数据
 ```
-{% macro render_bar(bar) -%}
+{% macroo render_bar(bar) -%}
     <div id="main" style="width: {{ bar.opts.width }}px;height: {{ bar.opts.height }}px;"></div>
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
@@ -187,12 +187,12 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 
         myChart.setOption(option);
     </script>
-{%- endmacro %}
+{%- endmacroo %}
 
 ```
-写好 `templates/macro` 后，`templates/test.html` 只需要调用 macro 了
+写好 `templates/macroo` 后，`templates/test.html` 只需要调用 macroo 了
 ```
-{% import 'macro' as macro %}
+{% import 'macroo' as macroo %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -202,7 +202,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
         <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
     </head>
     <body>
-    {{ macro.render_bar(bar) }}
+    {{ macroo.render_bar(bar) }}
     </body>
 </html>
 ```
@@ -280,9 +280,9 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 
 
 # pyecharts
-终于到这一步了，html 模板大同小异，主要看一下它的 macro
+终于到这一步了，html 模板大同小异，主要看一下它的 macroo
 ```
-{%- macro render_chart_content(c) -%}
+{%- macroo render_chart_content(c) -%}
     <div id="{{ c.chart_id }}" class="chart-container" style="width:{{ c.width }}; height:{{ c.height }};"></div>
     <script>
         var chart_{{ c.chart_id }} = echarts.init(
@@ -306,10 +306,10 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
             })
         {% endif %}
     </script>
-{%- endmacro %}
+{%- endmacroo %}
 ```
 有了前面的基础，这段代码看起来还是不那么困难的  
-显而易见，为了支持不同类型的 ECharts 图的结构体，引入 `if` 和 `for`。并且在类的属性中，就已经完成了大部分的数据格式转化，macro 仅需要完成数据填充  
+显而易见，为了支持不同类型的 ECharts 图的结构体，引入 `if` 和 `for`。并且在类的属性中，就已经完成了大部分的数据格式转化，macroo 仅需要完成数据填充  
 感兴趣的可以具体查看一下 pyecharts 是如何去设计类的
 
 
