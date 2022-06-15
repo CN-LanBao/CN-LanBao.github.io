@@ -75,7 +75,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 # 宏
 > 宏类似常规编程语言中的函数。它们用于把常用行为作为可重用的函数，取代手动重复的工作  
 
-在 templates 目录下创建 macro 文件，`templates/macro`
+在 templates 目录下创建 `macro` 文件，`templates/macro`
 ```
 {% macro p(name) -%}
     <p>{{ name }}</p>
@@ -190,7 +190,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 {%- endmacro %}
 
 ```
-写好 `templates/macro` 后，`templates/test.html` 只需要调用 macro 了
+写好 `templates/macro` 后，`templates/test.html` 只需要调用 `macro` 了
 ```
 {% import 'macro' as macro %}
 <!DOCTYPE html>
@@ -280,7 +280,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 
 
 # pyecharts
-终于到这一步了，html 模板大同小异，主要看一下它的 macro
+终于到这一步了，html 模板大同小异，主要看一下它的 `macro`
 ```
 {%- macro render_chart_content(c) -%}
     <div id="{{ c.chart_id }}" class="chart-container" style="width:{{ c.width }}; height:{{ c.height }};"></div>
@@ -309,7 +309,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 {%- endmacro %}
 ```
 有了前面的基础，这段代码看起来还是不那么困难的  
-显而易见，为了支持不同类型的 ECharts 图的结构体，引入 `if` 和 `for`。并且在类的属性中，就已经完成了大部分的数据格式转化，macro 仅需要完成数据填充  
+显而易见，为了支持不同类型的 ECharts 图的结构体，引入 `if` 和 `for`。并且在类的属性中，就已经完成了大部分的数据格式转化，`macro` 仅需要完成数据填充  
 感兴趣的可以具体查看一下 pyecharts 是如何去设计类的
 
 
