@@ -15,6 +15,7 @@ tags:
 
 整体的思路是：获取生成 html 的参数值 -> 填充到 html 模板，获取 html 内容 -> 写入 html 文件  
 首先需要了解基础用法和宏，注意，以下示例仅介绍了冰山一角的冰山一角，仅为能理解 pyecharts 做的基础学习，请务必查看官方文档
+ps: 文章中含有 macro_ 会导致 jekyll 编译失败，所以增加了下划线
 
 
 # 简单用法
@@ -75,7 +76,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 # 宏
 > 宏类似常规编程语言中的函数。它们用于把常用行为作为可重用的函数，取代手动重复的工作  
 
-在 templates 目录下创建macro 文件，`templates/macro`
+在 templates 目录下创建 macro 文件，`templates/macro`
 ```
 {% macro p(name) -%}
     <p>{{ name }}</p>
