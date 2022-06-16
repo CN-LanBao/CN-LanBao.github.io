@@ -1,6 +1,7 @@
 ---
 title: uiautomator2 二次封装
 date: 2022-05-09
+updated: 2022-05-09
 categories: 
 - Python
 tags:

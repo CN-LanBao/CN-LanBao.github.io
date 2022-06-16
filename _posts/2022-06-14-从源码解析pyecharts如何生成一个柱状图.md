@@ -1,6 +1,7 @@
 ---
 title: 从源码解析 pyecharts 如何生成一个柱状图
 date: 2022-06-14
+updated: 2022-06-15
 categories: 
 - Python
 tags:

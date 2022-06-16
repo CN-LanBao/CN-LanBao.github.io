@@ -1,6 +1,7 @@
 ---
 title: 用 pathlib 代替 os
 date: 2022-06-01
+updated: 2022-06-02
 categories: 
 - Python
 tags:

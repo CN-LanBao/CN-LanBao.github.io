@@ -1,6 +1,7 @@
 ---
 title: subprocess 读取输出
 date: 2022-03-28
+updated: 2022-04-29
 categories: 
 - Python
 tags:
