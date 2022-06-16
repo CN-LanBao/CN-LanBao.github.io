@@ -10,6 +10,10 @@ tags:
 ---
 
 
+```
+{\% macro -\%}
+\{% macro -%\}
+```
 # 背景
 在上一篇文章中 [从源码解析 pyecharts 如何生成一个柱状图](https://cn-lanbao.github.io/python/2022/06/14/%E4%BB%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90pyecharts%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E6%9F%B1%E7%8A%B6%E5%9B%BE/) 发现 pyecharts 和 flask 一样用到了 Jinja2，本文就简单学习 Jinja2，目的是为了理解 pyecharts 是如何构建 html 的。惯例，先附上 [中文文档](http://docs.jinkan.org/docs/jinja2/)（感谢 yinian1992@gmail.com 的翻译） ，但是请注意：**官方文档是为 Python2 编撰的，但是本文基于 Python3**  
 
