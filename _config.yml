@@ -218,7 +218,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   Github: https://github.com/CN-LanBao
-  StackOverFlow: https://stackoverflow.com/users/18602881/cn-lanbao?tab=profile
+  StackOverflow: https://stackoverflow.com/users/18602881/cn-lanbao?tab=profile
   
 
 # Social Links Icons
@@ -231,7 +231,7 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  StackOverFlow: false
+  StackOverflow: StackOverflow
 
 
 # Sidebar Avatar
