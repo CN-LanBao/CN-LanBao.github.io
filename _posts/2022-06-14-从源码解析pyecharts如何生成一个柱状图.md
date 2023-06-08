@@ -72,7 +72,7 @@ class Base(ChartMixin):
         self._is_geo_chart: bool = False
 ```
 
-可以看到设置了一个默认入参 `InitOpts()`，`InitOpts` 继承于 `BasicOpts`。而 `BasicOpts` 比较特殊，实现了 `__slots__`，说明这是一个只被当作数据结构而频繁使用的类，这样的类会大量减少内存的使用（可以参考我的另外一篇文章 [类与对象（上）](https://cn-lanbao.github.io/python/2022/05/13/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1-%E4%B8%8A/) 中的**当创建大量实例时如何节省内存**）
+可以看到设置了一个默认入参 `InitOpts()`，`InitOpts` 继承于 `BasicOpts`。而 `BasicOpts` 比较特殊，实现了 `__slots__`，说明这是一个只被当作数据结构而频繁使用的类，这样的类会大量减少内存的使用（可以参考我的另外一篇文章 [类与对象（上）](https://lanbaoshen.github.io/python/2022/05/13/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1-%E4%B8%8A/) 中的**当创建大量实例时如何节省内存**）
 
 ```
 class BasicOpts:

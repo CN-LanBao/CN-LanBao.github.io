@@ -15,7 +15,7 @@ tags:
 
 
 # 实现思路
-本文涉及的 log 相关操作，使用的是自己用 logging 封装的 log 类，详情请参考 [logging 实现日志类](https://cn-lanbao.github.io/python/2022/05/05/logging%E5%AE%9E%E7%8E%B0%E6%97%A5%E5%BF%97%E7%B1%BB/)  
+本文涉及的 log 相关操作，使用的是自己用 logging 封装的 log 类，详情请参考 [logging 实现日志类](https://lanbaoshen.github.io/python/2022/05/05/logging%E5%AE%9E%E7%8E%B0%E6%97%A5%E5%BF%97%E7%B1%BB/)  
 一个从未接触过 uiautomator2 的测试同学想要将其用起来，至少要先完成库安装，然后通过度娘或 github 等其他途径了解到需要完成前置操作 init 和 connect。所以，写了一个 Uiautomator 类，在 `__init__` 中完成 uiautomator2 init 和 device connect 操作。使用时，仅需要对 Uiautomator 类进行实例化即可  
 将 `python -m uiautomator2 init` 指定为准备好的 python 即可免去用户 python 环境依赖
 ```
@@ -55,7 +55,7 @@ class Uiautomator(object):
 def click_resource_id(self, resource_id):
     """
     点击指定 resource id 控件
-    @Author: CN-LanBao
+    @Author: Lanbao Shen
     @Create: 2022/5/7 14:13
     :param resource_id: 控件 resourceId 属性值
     :return: None
@@ -66,7 +66,7 @@ def click_resource_id(self, resource_id):
 def click_text(self, text):
     """
     点击指定 text 控件
-    @Author: CN-LanBao
+    @Author: Lanbao Shen
     @Create: 2022/5/7 14:15
     :param text: 控件 text 属性值
     :return: None
@@ -77,7 +77,7 @@ def click_text(self, text):
 def click_xpath(self, xpath):
     """
     点击指定 xpath 控件
-    @Author: CN-LanBao
+    @Author: Lanbao Shen
     @Create: 2022/5/7 14:16
     :param xpath: 控件 xpath 属性值
     :return: None
@@ -90,7 +90,7 @@ def click_xpath(self, xpath):
 def _fail_screenshot(self, func_name):
     """
     uiautomator2 api 失败时保存设备截图至本地
-    @Author: CN-LanBao
+    @Author: Lanbao Shen
     @Create: 2022/5/7 16:21
     :param func_name: 异常的方法名
     :return: str 截图路径
@@ -110,14 +110,14 @@ def _fail_screenshot(self, func_name):
 def u2_log(func):
     """
     装饰器，用来打印并保存执行 uiautomator2 api 的 log
-    @Author: CN-LanBao
+    @Author: Lanbao Shen
     @Create: 2022/5/6 16:05
     :return: func
     """
     def wrapper(self, *args, **kwargs):
         """
         写入 log (设备 ID, 方法名和入参, 方法 return)
-        @Author: CN-LanBao
+        @Author: Lanbao Shen
         @Create: 2022/5/6 16:06
         :return: func()
         """

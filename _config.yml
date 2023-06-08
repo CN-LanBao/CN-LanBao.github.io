@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: CN-LanBao's Blog
+title: Lanbao's Blog
 subtitle:
 description:
-author: CN-LanBao
+author: Lanbao
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
@@ -217,8 +217,8 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  Github: https://github.com/CN-LanBao
-  StackOverflow: https://stackoverflow.com/users/18602881/cn-lanbao?tab=profile
+  Github: https://github.com/lanbaoshen
+  StackOverflow: https://stackoverflow.com/users/18602881
   
 
 # Social Links Icons
@@ -384,7 +384,7 @@ han: false
 # Disqus
 disqus:
   enable: false
-  shortname: CN-LanBao
+  shortname: Lanbao
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true

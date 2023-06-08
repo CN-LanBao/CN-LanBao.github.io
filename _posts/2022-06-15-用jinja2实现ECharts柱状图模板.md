@@ -12,7 +12,7 @@ tags:
 
 
 # 背景
-在上一篇文章中 [从源码解析 pyecharts 如何生成一个柱状图](https://cn-lanbao.github.io/python/2022/06/14/%E4%BB%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90pyecharts%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E6%9F%B1%E7%8A%B6%E5%9B%BE/) 发现 pyecharts 和 flask 一样用到了 Jinja2，本文就简单学习 Jinja2，目的是为了理解 pyecharts 是如何构建 html 的。惯例，先附上 [中文文档](http://docs.jinkan.org/docs/jinja2/)（感谢 yinian1992@gmail.com 的翻译） ，但是请注意：**官方文档是为 Python2 编撰的，但是本文基于 Python3**  
+在上一篇文章中 [从源码解析 pyecharts 如何生成一个柱状图](https://lanbaoshen.github.io/python/2022/06/14/%E4%BB%8E%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90pyecharts%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E6%9F%B1%E7%8A%B6%E5%9B%BE/) 发现 pyecharts 和 flask 一样用到了 Jinja2，本文就简单学习 Jinja2，目的是为了理解 pyecharts 是如何构建 html 的。惯例，先附上 [中文文档](http://docs.jinkan.org/docs/jinja2/)（感谢 yinian1992@gmail.com 的翻译） ，但是请注意：**官方文档是为 Python2 编撰的，但是本文基于 Python3**  
 
 整体的思路是：获取生成 html 的参数值 -> 填充到 html 模板，获取 html 内容 -> 写入 html 文件  
 首先需要了解基础用法和宏，注意，以下示例仅介绍了冰山一角的冰山一角，仅为能理解 pyecharts 做的基础学习，请务必查看官方文档
@@ -52,7 +52,7 @@ from jinja2 import Environment, FileSystemLoader
 
 env = Environment(loader=FileSystemLoader(Path(__file__).parent / "templates"))
 template = env.get_template('test.html')
-html = template.render(name="CN-LanBao")
+html = template.render(name="Lanbao")
 with open("test.html", "w+", encoding="utf-8") as html_file:
     html_file.write(html)
 
@@ -67,7 +67,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
     <title>Title</title>
 </head>
 <body>
-<p>CN-LanBao</p>
+<p>Lanbao</p>
 </body>
 </html>
 ```
@@ -112,7 +112,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
     <title>Title</title>
 </head>
 <body>
-<p>CN-LanBao</p>
+<p>Lanbao</p>
 </body>
 </html>
 ```
@@ -228,7 +228,7 @@ class Bar(object):
         self.opts = {
             "width": 600,
             "height": 400,
-            "title": "CN-LanBao 测试柱状图",
+            "title": "Lanbao 测试柱状图",
             "legend": [],
             "series": [],
             "x_axis": [],
@@ -266,7 +266,7 @@ with open("test.html", "w+", encoding="utf-8") as html_file:
 
         var option = {
             title: {
-                text: 'CN-LanBao 测试柱状图'
+                text: 'Lanbao 测试柱状图'
             },
                 tooltip: {},
             legend: {

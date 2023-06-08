@@ -209,7 +209,7 @@ Path("test.file").touch()
 Path 对象自带操作文件方法
 ```
 # 写入
-Path("test.file").write_text("CN-LanBao\n")
+Path("test.file").write_text("Lanbao\n")
 
 # 读取
 Path("test.file").read_text()
